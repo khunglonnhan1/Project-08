@@ -1,0 +1,120 @@
+@use "../abstracts";
+
+html {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(32%) saturate(1182%) hue-rotate(210deg) brightness(97%)
+    contrast(96%);
+  --body-bg: #f6f6f6;
+  --top-act-group-bg-color: #fff;
+  --top-act-group-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  --top-act-group-separate: #ededf6;
+
+  // Header
+  --header-bg-color: #eee;
+
+  @include abstracts.screen(lg) {
+    --header-bg-color: #fff;
+    --header-shadow-color: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  }
+
+  --header-act-dropdown-bg: #fff;
+  --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+
+  // Dropdown
+  --dropdown-bg-color: #fff;
+  --dropdown-group-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+  --top-menu-border-color: #d2d1d6;
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(8%) sepia(7%) saturate(7049%) hue-rotate(215deg)
+    brightness(93%) contrast(95%);
+
+  // Sidebar
+  --sidebar-bg: #fff;
+  --sidebar-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+
+  // Category item
+  --cate-item-bg: #eee;
+  --cate-item-heading-color: #000;
+  --cate-item-img-bg: #fff;
+
+  @include abstracts.screen(md) {
+    --cate-item-bg: #fff;
+  }
+
+  // Buttons
+  --filter-btn-color: #6c6c72;
+  --filter-btn-bg: #fff;
+
+  // Product card
+  --product-card-bg: #fff;
+  --product-card-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+
+  // Filter form
+  --filter-form-bg: #fff;
+  --filter-form-shadow: rgba(200, 200, 200, 0.4);
+  --filter-form-text-color: #1a162e;
+  --filter-form-tag-bg: #f8f8fb;
+
+  // Footer
+  --footer-bg-color: #eee;
+  --footer-column-heading-color: var(--cate-item-heading-color);
+
+  // Auth
+  --auth-content-bg: #fff;
+  @include abstracts.screen(md) {
+    --auth-intro-bg: #fff;
+  }
+
+  // Form
+  --form-text-input-border-color: #d2d1d6;
+  --form-select-dialog-bg: #fff;
+  --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.2);
+  --form-option-hover-bg: #ebebeb;
+
+  // Product detail
+  --product-detail-bg: #fff;
+  --product-info-bg: #f6f6f6;
+  --product-info-tag-bg: #ededf6;
+
+  @include abstracts.screen(md) {
+    --product-detail-bg: #fafafd;
+    --product-info-bg: #fff;
+    --product-info-content-md-bg: #fff;
+    --product-info-content-md-shadow: rgba(237, 237, 246, 0.2);
+  }
+
+  // Breadcrumbs
+  --breadcrumb-bg: #f6f6f6;
+  --breadcrumb-shadow: rgba(237, 237, 246, 0.2);
+
+  @include abstracts.screen(md) {
+    --breadcrumb-bg: #fff;
+  }
+
+  // Search bar
+  --search-bar-bg: #fff;
+
+  // Review card
+  --review-card-bg: #fafafd;
+
+  @include abstracts.screen(md) {
+    --review-card-bg: #fff;
+  }
+
+  // Act dropdown
+  --act-dropdown-border: #d2d1d6;
+
+  // Checkout
+  --checkout-page-breadcrumbs-bg: #fff;
+  --checkout-cart-info-bg: #fff;
+  --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
+
+  // Gift item
+  --gift-item-icon-bg: #7644e11a;
+
+  // Dialog
+  --dialog-bg: #fff;
+  --dialog-shadow: rgba(237, 237, 246, 0.2);
+
+  // Address card
+  --address-card-checkbox-border: #1a162e;
+}

@@ -1,0 +1,172 @@
+@use "../abstracts";
+
+.footer {
+  background: var(--footer-bg-color);
+  padding: 30px 0;
+  font-size: 1.4rem;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-between;
+
+    @include abstracts.screen(xl) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    @include abstracts.screen(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @include abstracts.screen(sm) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__column {
+    &--heading {
+      color: var(--footer-column-heading-color);
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 145.455%;
+
+      @include abstracts.screen(lg) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &--top-on-sm {
+      // grid-column: 5/6;
+      @include abstracts.screen(sm) {
+        grid-area: 1 / 1/ 2/ 2;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 20px;
+  }
+
+  &__item {
+    font-weight: 400;
+    line-height: 150%;
+
+    &:hover {
+      color: #0071dc;
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 10px;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+
+    height: 36px;
+    margin-top: 10px;
+
+    &--icon {
+      width: 16px;
+      filter: var(--footer-contact-icon-color);
+    }
+
+    &:hover &--thumb {
+      color: #0071dc;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    background: #fff;
+    margin-top: 20px;
+
+    &--mail {
+      flex-grow: 1;
+      padding: 0 16px;
+    }
+  }
+
+  &-btn {
+    border-radius: 0 !important;
+  }
+
+  &__social {
+    display: flex;
+    column-gap: 20px;
+
+    &--link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+
+      filter: grayscale(50%);
+      transition: transform, filter;
+      transition-duration: 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+        filter: grayscale(0);
+      }
+    }
+
+    &--icon {
+      filter: brightness(0) saturate(100%) invert(92%) sepia(8%) saturate(0%) hue-rotate(96deg) brightness(107%)
+        contrast(106%);
+    }
+  }
+
+  &__hide-on-xl {
+    @include abstracts.screen(xl) {
+      display: none;
+    }
+
+    @include abstracts.screen(sm) {
+      display: block;
+    }
+  }
+
+  &__show-on-xl {
+    display: none;
+
+    @include abstracts.screen(xl) {
+      display: block;
+      margin-top: 20px;
+    }
+
+    @include abstracts.screen(sm) {
+      display: none;
+    }
+  }
+
+  &-logo {
+    margin-left: 0 !important;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    margin-top: 30px;
+
+    @include abstracts.screen(md) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+}
+
+.show-on-xl {
+  margin-top: 20px;
+}
